@@ -1,0 +1,14 @@
+6.5.15:
+Anwesenheit:
+- Basti, Dominic, Wladik, Michael
+
+
+Getan:
+- SQL-Tabelle erstellt [comitted]
+- organisatorisches
+- Einladung der User ins repository / Einführung in GitHub
+
+ToDo:
+- ERM ordentlich aufzeichnen [Dominic, bis 8.5.15]
+- welche Statistiken sollen erstellt werden
+- Wie soll das Rabattsystem aussehen
