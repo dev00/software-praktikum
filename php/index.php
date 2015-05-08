@@ -21,6 +21,7 @@
 <body>
 	<div class="container">
 		<?php include('navigation.php');?>
+		<?php include('pizza_sql.php');?>
 		
 		<!--Main-->
 		<div class="row content">
@@ -28,12 +29,11 @@
 			<div class="col-md-2 col-sm-3 col-xs-9 hidden-print sidenav">
 				<nav id="sidenav">
 					<ul>
-						<li><a href="#margherita">Margherita</a></li>
-						<li><a href="#salami">Pizza Salami</a></li>
-						<li><a href="#schinken">Pizza Schinken</a></li>
-						<li><a href="#spezial">Pizza Spezial</a></li>
-						<li><a href="#calzone">Pizza Calzone</a></li>
-						<li><a href="#tuna">Pizza Tuna</a></li>
+					<?php
+						include('pizza_name_sql.php');
+						while($row = mysql_fetch_object($ergebnis)){
+							echo "<li><a href=\"$row->name\">$row->name</a></li>";
+						}?>
 					</ul>
 				</nav>
 			</div>
@@ -41,109 +41,32 @@
 		<!--/Section Navigation-->
 		<!--Site-Content-->
 			<div class="col-md-10 col-sm-9 col-xs-12">
-				
-        <!--Margherita-->
-        <div class="post">
-					<p class="metainfo">am 28.8.2014 von klaus</p>
-					<h2 id="margherita">Pizza Margherita</h2>
-          <div class="row">	
-							<div class="col-sm-3">
-								<img src="img/sek1.jpg" class="img-responsive hidden-xs img-rounded">
-							</div>
-							<div class="col-sm-7">
-								Unsere normale Pizza, belegt mit Tomate und Delicious CheezZe.	
-							</div>
-              <div class="col-sm-2">
-								<img src="img/bestell.jpg" class="img-responsive">
-							</div>
-					</div>					
-				</div>
-				
-				<!--Salami-->
-				<div class="post">
-						<p class="metainfo">am 27.1.2014 von klaus</p>
-						<h2 id="salami">Pizza Salami</h2>											
-						<div class="row">	
-							<div class="col-sm-3">
-								<img src="img/sek2.jpg" class="img-responsive hidden-xs img-rounded">
-							</div>
-							<div class="col-sm-7">
-								Eine advanced Margherita, mit der X-tra Portion an raw Salami	
-							</div>
-              <div class="col-sm-2">
-								<img src="img/bestell.jpg" class="img-responsive">
-							</div>
-					</div>
-				</div>
-				
-				<!--Schinken-->
-				<div class="post">
-						<p class="metainfo">am 27.1.2014 von klaus</p>
-						<h2 id="schinken">Pizza Schinken</h2>											
-						<div class="row">	
-							<div class="col-sm-3">
-								<img src="img/sek2.jpg" class="img-responsive hidden-xs img-rounded">
-							</div>
-							<div class="col-sm-7">
-								Wie Salami. Nur ohne Salami. Dafür mit Schinken.	
-							</div>
-              <div class="col-sm-2">
-								<img src="img/bestell.jpg" class="img-responsive">
-							</div>
-					</div>
-				</div>
-				
-				<!--Spezial-->
-				<div class="post">
-						<p class="metainfo">am 27.1.2014 von klaus</p>
-						<h2 id="spezial">Pizza Spezial</h2>											
-						<div class="row">	
-							<div class="col-sm-3">
-								<img src="img/sek2.jpg" class="img-responsive hidden-xs img-rounded">
-							</div>
-							<div class="col-sm-7">
-								Salami meets Schinken. B0000ooOM!
-							</div>
-              <div class="col-sm-2">
-								<img src="img/bestell.jpg" class="img-responsive">
-							</div>
-					</div>
-				</div>
-				
-				<!--Calzone-->
-				<div class="post">
-						<p class="metainfo">am 27.1.2014 von klaus</p>
-						<h2 id="calzone">Pizza Calzone</h2>											
-						<div class="row">	
-							<div class="col-sm-3">
-								<img src="img/sek2.jpg" class="img-responsive hidden-xs img-rounded">
-							</div>
-							<div class="col-sm-7">
-								Calzone, Alter. 
-							</div>
-              <div class="col-sm-2">
-								<img src="img/bestell.jpg" class="img-responsive">
-							</div>
-					</div>
-				</div>
-				
-				<!--Tuna-->
-				<div class="post">
-						<p class="metainfo">am 27.1.2014 von klaus</p>
-						<h2 id="tuna">Pizza Tuna</h2>											
-						<div class="row">	
-							<div class="col-sm-3">
-								<img src="img/sek2.jpg" class="img-responsive hidden-xs img-rounded">
-							</div>
-							<div class="col-sm-7">
-								Wers mag, kanns nehmen. Thunfisch halt. Ich mags nicht.	
-							</div>
-              <div class="col-sm-2">
-								<img src="img/bestell.jpg" class="img-responsive">
-							</div>
-					</div>
-				</div>
-				
+
+<?php
+	include('pizza_sql.php');
+
+	while($row = mysql_fetch_object($ergebnis)){
+	echo "<div class=\"post\">";
+	echo "	<p class=\"metainfo\">am 28.8.2014 von klaus</p>";
+	echo "	<h2 id=\"$row->name\">Pizza $row->name</h2>";
+	echo "	<div class=\"row\">";
+	echo "		<div class=\"col-sm-3\">";
+	echo "			<img src=\"img/$row->name.jpg\" class=\"img-responsive hidden-xs img-rounded\">";
+	echo "		</div>";
+	echo "		<div class=\"col-sm-7\">";
+	echo "			<p>$row->beschreibung</p>";
+	echo "		</div>"	;		
+	echo "		<div class=\"col-sm-2\">";
+	echo "			<p>Preis: $row->preis</p>";
+	echo "			<p><img src=\"img/bestell.jpg\" class=\"img-responsive\"></p>";
+	echo "		</div>";
+	echo "	</div>";
+	echo "</div>";
+	echo "";
+	echo "";
+	echo "";
+	}
+?>
 				
 				
 				
