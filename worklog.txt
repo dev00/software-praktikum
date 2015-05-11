@@ -1,14 +1,43 @@
 6.5.15:
 Anwesenheit:
 - Basti, Dominic, Wladik, Michael
-
-
 Getan:
 - SQL-Tabelle erstellt [comitted]
 - organisatorisches
-- Einladung der User ins repository / Einf�hrung in GitHub
-
+- Einladung der User ins repository / Einführung in GitHub
 ToDo:
 - ERM ordentlich aufzeichnen [Dominic, bis 8.5.15]
 - welche Statistiken sollen erstellt werden
 - Wie soll das Rabattsystem aussehen
+
+
+7.5.15:
+Anwesenheit:
+- Basti, Wladik, Michael, Dominic
+Getan:
+- Homepage erstellt
+ToDo:
+- Raspberry aufsetzen
+
+
+8.5.15:
+Anwesenheit:
+- Basti, Wladik, Michael, Dominic
+Getan:
+- Raspberry Pi mit Raspbian Wheezy aufgesetzt
+- Datenbank Einbindung in PHP
+- Layout anpassen
+- Dynamisches Einholen der Daten
+ToDo:
+- LAMP-Umgebung installieren
+- Raspberry Pi einrichten
+
+
+11.5.15:
+Anwesenheit:
+- Basti, Wladik, Michael
+Getan:
+- Menü (Navigation) in HTML angepasst
+ToDo:
+- Datenbank befüllen (Pizzen, Kunden, Zutaten)
+- Adminpanel bauen und für den Admin freischalten
