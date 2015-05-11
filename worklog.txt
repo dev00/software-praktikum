@@ -38,6 +38,7 @@ Anwesenheit:
 - Basti, Wladik, Michael
 Getan:
 - Menü (Navigation) in HTML angepasst
+- Login und Registrierung entworfen
 ToDo:
 - Datenbank befüllen (Pizzen, Kunden, Zutaten)
 - Adminpanel bauen und für den Admin freischalten
