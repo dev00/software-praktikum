@@ -42,3 +42,13 @@ Getan:
 ToDo:
 - Datenbank befüllen (Pizzen, Kunden, Zutaten)
 - Adminpanel bauen und für den Admin freischalten
+
+12.5.15:
+Anwesenheit:
+- Basti, Wladik
+Getan:
+- pizzeria.sql mit Daten befüllt (siehe Changelog)
+- Whatsapp-Gruppe angelegt
+ToDo:
+- Adminpanel bauen und für den Admin freischalten
+
