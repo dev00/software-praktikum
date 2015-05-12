@@ -57,7 +57,9 @@
 	echo "			<p>$row->beschreibung</p>";
 	echo "		</div>"	;		
 	echo "		<div class=\"col-sm-2\">";
-	echo "			<p>Preis: $row->preis</p>";
+	echo "			<p>Preis S: $row->preis_s</p>";
+	echo "			<p>Preis M: $row->preis_m</p>";
+	echo "			<p>Preis L: $row->preis_l</p>";
 	echo "			<p><img src=\"img/bestell.jpg\" class=\"img-responsive\"></p>";
 	echo "		</div>";
 	echo "	</div>";
