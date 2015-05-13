@@ -4,7 +4,7 @@
 		or die ("keine Verbindung moeglich.
 		 Benutzername oder Passwort sind falsch");
 
-		mysql_select_db("pizzaria")
+		mysql_select_db("pizzeria")
 		or die ("Die Datenbank existiert nicht.");
 
 
