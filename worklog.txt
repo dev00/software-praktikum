@@ -43,6 +43,7 @@ ToDo:
 - Datenbank befüllen (Pizzen, Kunden, Zutaten)
 - Adminpanel bauen und für den Admin freischalten
 
+
 12.5.15:
 Anwesenheit:
 - Basti, Wladik
@@ -52,3 +53,12 @@ Getan:
 ToDo:
 - Adminpanel bauen und für den Admin freischalten
 
+
+13.5.15:
+Anwesenheit:
+- Basti, Wladik, Michael
+Getan:
+- Erklärung der Grundfunktionen
+- Erweiterung der Pizzen mit Größe (S, M, L)
+ToDo:
+- 
