@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
+<?php header('Content-Type: text/html; charset=utf-8'); ?>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Unsere Schule</title>
@@ -20,7 +21,9 @@
 </head>
 <body>
 	<div class="container">
-		<?php include('navigation.php');?>		
+		<?php include('navigation.php');?>
+		<?php include('pizza_sql.php');?>
+		
 		<!--Main-->
 		<div class="row content">
 			<!--Section Navigation-->
@@ -29,7 +32,9 @@
 					<ul>
 					<?php
 						include('pizza_name_sql.php');
-					?>
+						while($row = mysql_fetch_object($ergebnis)){
+							echo "<li><a href=\"$row->name\">$row->name</a></li>";
+						}?>
 					</ul>
 				</nav>
 			</div>
@@ -37,9 +42,43 @@
 		<!--/Section Navigation-->
 		<!--Site-Content-->
 			<div class="col-md-10 col-sm-9 col-xs-12">
-				<?php
-					include('pizza_sql.php');
-				?>				
+
+<?php
+	include('pizza_sql.php');
+
+	while($row = mysql_fetch_object($ergebnis)){
+	echo "<div class=\"post\">";
+	echo "	<p class=\"metainfo\">am 28.8.2014 von klaus</p>";
+	echo "	<h2 id=\"$row->name\">Pizza $row->name</h2>";
+	echo "	<div class=\"row\">";
+	echo "		<div class=\"col-sm-3\">";
+	echo "			<img src=\"img/$row->name.jpg\" class=\"img-responsive hidden-xs img-rounded\">";
+	echo "		</div>";
+	echo "		<div class=\"col-sm-6\">";
+	echo "			<p>$row->beschreibung</p>";
+	echo "		</div>"	;		
+	echo "		<div class=\"col-sm-3\">";
+	echo "			<p>Preis S: $row->preis_s</p>";
+	echo "			<p>Preis M: $row->preis_m</p>";
+	echo "			<p>Preis L: $row->preis_l</p>";
+	echo "			<p><img src=\"img/bestell.jpg\" class=\"img-responsive\"></p>";
+	echo "		</div>";
+	echo "	</div>";
+	echo "</div>";
+	echo "";
+	echo "";
+	echo "";
+	}
+?>
+				
+				
+				
+				
+				
+				
+				
+				
+				
 			</div>	
 		</div>
 		<!--/Main-->	
