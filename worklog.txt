@@ -60,5 +60,8 @@ Anwesenheit:
 Getan:
 - Erklärung der Grundfunktionen
 - Erweiterung der Pizzen mit Größe (S, M, L)
+- CC-Bilder von Pizzen rausgesucht
 ToDo:
+- Header, Bestellbutton, 
+- Preise richtig anzeigen lassen
 - 
