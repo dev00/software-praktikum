@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Server Version:               5.1.46-community - MySQL Community Server (GPL)
 -- Server Betriebssystem:        Win32
--- HeidiSQL Version:             9.1.0.4867
+-- HeidiSQL Version:             8.0.0.4396
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `bestellung` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Bestellungen, welche Positionen aufführen';
 
 -- Exportiere Daten aus Tabelle pizzeria.bestellung: ~3 rows (ungefähr)
+DELETE FROM `bestellung`;
 /*!40000 ALTER TABLE `bestellung` DISABLE KEYS */;
 INSERT INTO `bestellung` (`ID`, `kundendaten_ID`, `datum`, `erledigt`) VALUES
 	(1, 2, '2015-05-08 08:05:35', 0),
@@ -42,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `extra-zutaten` (
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='Auflistung der zusätzlich buchbaren Zutaten';
 
 -- Exportiere Daten aus Tabelle pizzeria.extra-zutaten: ~25 rows (ungefähr)
+DELETE FROM `extra-zutaten`;
 /*!40000 ALTER TABLE `extra-zutaten` DISABLE KEYS */;
 INSERT INTO `extra-zutaten` (`ID`, `name`, `preis`) VALUES
 	(1, 'Käse', 0.9),
@@ -89,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `kundendaten` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='speichert alle Kundendaten';
 
 -- Exportiere Daten aus Tabelle pizzeria.kundendaten: ~3 rows (ungefähr)
+DELETE FROM `kundendaten`;
 /*!40000 ALTER TABLE `kundendaten` DISABLE KEYS */;
 INSERT INTO `kundendaten` (`ID`, `login`, `passwort`, `strasse`, `hausnummer`, `plz`, `ort`, `name`, `vorname`, `punktekonto`, `admin`) VALUES
 	(1, 'user1', 'cisco', 'straße', '4', '88088', 'Klausingen', 'Hans', 'Peter', 20, 0),
@@ -110,18 +113,18 @@ CREATE TABLE IF NOT EXISTS `pizza` (
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='Speichert die Standard-Pizzen mit Zutaten und Preisen';
 
 -- Exportiere Daten aus Tabelle pizzeria.pizza: ~14 rows (ungefähr)
+DELETE FROM `pizza`;
 /*!40000 ALTER TABLE `pizza` DISABLE KEYS */;
 INSERT INTO `pizza` (`ID`, `name`, `beschreibung`, `zutaten`, `preis_s`, `preis_m`, `preis_l`) VALUES
-	(1, 'Magherita', 'Pizza mit Tomate und Käse', 'Käse, Tomate', 4, 5.5, 7),
+	(1, 'Margherita', 'Pizza mit Tomate und Käse', 'Käse, Tomate', 4, 5.5, 7),
 	(2, 'Salami', 'Pizza mit Salami', 'Käse, Tomaten, Salami', 5, 6.5, 9),
-	(3, 'Schinken', 'Pizza mit Schinken', 'DEFAULT_INGREDIENT', 5.5, 7, 9.5),
+	(3, 'Schinken', 'Pizza mit Schinken und Champignons', 'DEFAULT_INGREDIENT', 5.5, 7, 9.5),
 	(4, 'Thunfisch', 'Pizza mit Thunfisch', 'DEFAULT_INGREDIENT', 6, 7.5, 10),
 	(5, 'Spezial', 'Pizza mit Schinken, Salami und Champignons', 'DEFAULT_INGREDIENT', 6.5, 8, 11),
 	(6, 'Hawaii', 'Pizza mit Ananas und Schinken', 'DEFAULT_INGREDIENT', 5.5, 7.5, 9.5),
 	(7, 'Vier Käse', 'Pizza mit Mozarella, Hirtenkäse, Gorgonzola und Parmesan', 'DEFAULT_INGREDIENT', 5.5, 7, 9),
-	(8, 'Diabolo', 'Scharfe Pizza mit Salami, Peperoni und Jalapenos', 'DEFAULT_INGREDIENT', 6.5, 8, 10.5),
-	(9, 'Panna', 'Pizza mit Sahnesoße und Schinken', 'DEFAULT_INGREDIENT', 5, 6.5, 8),
-	(10, 'Fungi', 'Pizza mit Champignons', 'DEFAULT_INGREDIENT', 5, 6.5, 7.5),
+	(8, 'Diavolo', 'Scharfe Pizza mit Salami, Peperoni und Jalapenos', 'DEFAULT_INGREDIENT', 6.5, 8, 10.5),
+	(10, 'Funghi', 'Pizza mit Champignons', 'DEFAULT_INGREDIENT', 5, 6.5, 7.5),
 	(11, 'Frutti Di Mare', 'Pizza mit Meeresfrüchten', 'DEFAULT_INGREDIENT', 6.5, 8.5, 11),
 	(12, 'Calzone', 'Pizza gefüllt mit Mozarella, Champignons, Schinken und Salami', 'DEFAULT_INGREDIENT', 7, 9, 11.5),
 	(13, 'Boss', 'Pizza mit Rucola, Schinken, Salami, Champignons, Mozarella, Zwiebeln, Jalapenos und Ei', 'DEFAULT_INGREDIENT', 8, 10, 13),
@@ -138,6 +141,7 @@ CREATE TABLE IF NOT EXISTS `pizza_extra` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Exportiere Daten aus Tabelle pizzeria.pizza_extra: ~0 rows (ungefähr)
+DELETE FROM `pizza_extra`;
 /*!40000 ALTER TABLE `pizza_extra` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pizza_extra` ENABLE KEYS */;
 
@@ -152,6 +156,7 @@ CREATE TABLE IF NOT EXISTS `position` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Exportiere Daten aus Tabelle pizzeria.position: ~3 rows (ungefähr)
+DELETE FROM `position`;
 /*!40000 ALTER TABLE `position` DISABLE KEYS */;
 INSERT INTO `position` (`ID`, `bestellung_ID`, `pizza_ID`, `menge`) VALUES
 	(1, 1, 1, 3),
